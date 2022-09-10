@@ -48,7 +48,7 @@
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
         <ul class="main-menu">
-            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}">خانه</a></li>
             <li class="has-submenu"><a href="#section2">About Us</a>
                 <ul class="sub-menu">
                     <li><a href="#section2">Who we are?</a></li>
@@ -60,7 +60,16 @@
             <li><a href="#section4">Courses</a></li>
             <!-- <li><a href="#section5">Video</a></li> -->
             <li><a href="#section6">Contact</a></li>
-            <li><a href="https://templatemo.com" class="external">External</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'login' %}" class="external">ورود</a></li>
+                <li><a href="{% url 'sign_up' %}" class="external">ثبت نام</a></li>
+            {% else %}
+                <p>{{ user.username }} |
+                <li><a href="{% url 'sign_up' %}" class="external">خروج</a></li>
+
+
+            {% endif %}
+            <li><a href="#" class="external">پنل کاربری</a></li>
         </ul>
     </nav>
 

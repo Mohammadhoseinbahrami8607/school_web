@@ -13,4 +13,4 @@ class CoustomuserCrationForm(UserCreationForm):
 class CoustomUserChangeForm(UserChangeForm):
     class Meta:
         model = models.CustomUser
-        fields = ['password', 'father_name', 'first_name', 'last_name', 'username']
+        fields = ['father_name', 'first_name', 'last_name', 'username']
