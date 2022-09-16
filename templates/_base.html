@@ -60,16 +60,16 @@
             <li><a href="#section4">Courses</a></li>
             <!-- <li><a href="#section5">Video</a></li> -->
             <li><a href="#section6">Contact</a></li>
+
             {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}" class="external">خروج</a></li>
+                <li><a href="{% url 'panel_list_view' user.username %}" class="external">پنل کاربری</a></li>
+            {% else %}
                 <li><a href="{% url 'login' %}" class="external">ورود</a></li>
                 <li><a href="{% url 'sign_up' %}" class="external">ثبت نام</a></li>
-            {% else %}
-                <p>{{ user.username }} |
-                <li><a href="{% url 'sign_up' %}" class="external">خروج</a></li>
-
-
             {% endif %}
-            <li><a href="#" class="external">پنل کاربری</a></li>
+
+
         </ul>
     </nav>
 

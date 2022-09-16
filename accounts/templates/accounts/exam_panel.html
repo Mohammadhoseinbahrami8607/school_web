@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+{% block title %}لیست امتحانات{% endblock %}
+{% block context %}
+    {% for exam in exam %}
+        <br><br><br>
+        <a href="{% url 'opinion_exam' user.username exam.pk %}">{{ exam.subject }}</a>
+    {% endfor %}
+{% endblock %}

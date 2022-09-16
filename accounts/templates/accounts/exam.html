@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+{% block title %}امتحان {{ exams.subject }}{% endblock %}
+{% block context %}
+    {% for quastion in quastions %}
+        <form method="post" action="">
+            {% csrf_token %}
+
+        </form>
+    {% endfor %}
+{#    {% for soal in soal %}#}
+{#        <br><br><br><br><br>#}
+{#        <h3 class="text-right">{{ soal.quastion }}</h3>#}
+{#        <h4 class="text-right">{{ soal.option1 }}</h4>#}
+{#        <h4 class="text-right">{{ soal.option2 }}</h4>#}
+{#        <h4 class="text-right">{{ soal.option3 }}</h4>#}
+{#        <h4 class="text-right">{{ soal.option4 }}</h4>#}
+{#    {% endfor %}#}
+{% endblock %}

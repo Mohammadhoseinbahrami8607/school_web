@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'pages',
     'crispy_forms',
-    'panel'
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
