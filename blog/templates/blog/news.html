@@ -1,0 +1,7 @@
+{% extends '_base.html' %}
+{% block title %}news list{% endblock %}
+{% block context %}
+    {% for newss in news %}
+        <a href="#">{{ newss.title }}</a>
+    {% endfor %}
+{% endblock %}
